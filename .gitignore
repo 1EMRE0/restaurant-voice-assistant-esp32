@@ -1,0 +1,94 @@
+# =========================
+# Operating System
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Editors / IDEs
+# =========================
+.vscode/
+.idea/
+.clangd/
+.ccls-cache/
+*.workspace
+*.user
+*.suo
+*.sln.docstates
+
+# =========================
+# Temporary Files
+# =========================
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Build Output
+# =========================
+build/
+**/build/
+
+*.o
+*.a
+*.elf
+*.bin
+*.map
+*.out
+
+# =========================
+# CMake
+# =========================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+# =========================
+# ESP-IDF Component Manager
+# =========================
+managed_components/
+
+# =========================
+# ESP-IDF Local Cache
+# =========================
+.espressif/
+components/.idf/
+**/components/.idf/
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+dist/
+*.egg-info/
+
+# =========================
+# Language Server
+# =========================
+compile_commands.json
+
+# =========================
+# ESP-IDF Configuration
+# =========================
+sdkconfig.old
+
+# clangd
+.clangd

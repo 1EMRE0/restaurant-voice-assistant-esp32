@@ -1,0 +1,30 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "wifi/wifi_manager.c"
+        "audio_input/audio_input.c"
+        "audio_output/audio_output.c"
+        "button/button_manager.c"
+        "protocol/protocol_manager.c"
+        "webSocket/webSocket_manager.c"
+
+    INCLUDE_DIRS
+        "."
+        "wifi"
+        "audio_input"
+        "audio_output"
+        "button"
+        "config"
+        "protocol"
+        "webSocket"
+
+    REQUIRES
+        esp_wifi
+        esp_event
+        nvs_flash
+        esp_timer
+        esp_netif
+        esp_websocket_client
+        json
+        driver
+)

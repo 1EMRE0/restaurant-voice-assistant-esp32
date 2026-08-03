@@ -89,12 +89,25 @@ int audio_output_play(const uint8_t *data, size_t len) {
     }
 
     size_t bytes_written = 0;
-    esp_err_t err = i2s_channel_write(tx_handle, data, len, &bytes_written, portMAX_DELAY);
-    
-    if (err != ESP_OK) {
-        ESP_LOGE(TAG, "I2S yazma hatasi: %s", esp_err_to_name(err));
-        return -1;
-    }
+    esp_err_t err = i2s_channel_write(
+    tx_handle,
+    data,
+    len,
+    &bytes_written,
+    portMAX_DELAY
+);
 
-    return (int)bytes_written;
+if (err != ESP_OK) {
+    ESP_LOGE(TAG, "I2S yazma hatasi: %s", esp_err_to_name(err));
+    return -1;
+}
+
+if (bytes_written != len) {
+    ESP_LOGW(TAG,
+             "Eksik ses verisi yazildi (%u / %u byte)",
+             (unsigned)bytes_written,
+             (unsigned)len);
+}
+
+return (int)bytes_written;
 }
